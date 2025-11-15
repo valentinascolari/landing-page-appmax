@@ -38,38 +38,39 @@ const footerColumns = [
 
 export const FooterSection = (): JSX.Element => {
   return (
-    <footer className="flex flex-col items-start gap-2.5 px-[233px] py-[21px] w-full bg-white">
-      <div className="flex flex-col items-start gap-[62px] px-0 py-6 w-full">
-        <div className="flex items-start justify-between gap-[94px] w-full">
+    <footer className="w-full bg-white py-8 md:py-12">
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+      <div className="flex flex-col items-start gap-8 md:gap-12 w-full">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 w-full">
           {footerColumns.map((column, index) => (
             <nav
               key={index}
-              className="flex flex-col items-start gap-[9px] px-0 py-px"
+              className="flex flex-col items-start gap-2"
             >
-              <h3 className="flex items-center justify-center h-6 [font-family:'Inter',Helvetica] font-bold text-[#233046] text-xl tracking-[0] leading-[26px] whitespace-nowrap">
+              <h3 className="[font-family:'Inter',Helvetica] font-bold text-[#233046] text-lg md:text-xl tracking-[0] leading-[26px] mb-2">
                 {column.title}
               </h3>
               {column.links.map((link, linkIndex) => (
                 <a
                   key={linkIndex}
                   href="#"
-                  className="flex items-center justify-center h-5 [font-family:'Inter',Helvetica] font-normal text-[#848484] text-base tracking-[0] leading-[21.0px] whitespace-nowrap hover:text-[#233046] transition-colors"
+                  className="[font-family:'Inter',Helvetica] font-normal text-[#848484] text-sm md:text-base tracking-[0] leading-[21.0px] hover:text-[#233046] transition-colors"
                 >
                   {link}
                 </a>
               ))}
             </nav>
           ))}
-          <div className="w-[147px] h-[58px] bg-[url(/pci-dss-compliant.png)] bg-cover bg-[50%_50%]" />
+          <div className="hidden lg:block w-[147px] h-[58px] bg-[url(/pci-dss-compliant.png)] bg-cover bg-[50%_50%]" />
         </div>
 
-        <div className="flex flex-col items-center gap-[11px] w-full">
+        <div className="flex flex-col items-center gap-4 w-full">
           <img className="w-[150px]" alt="Logo APPMAX" src="/logo-appmax.svg" />
 
           <img className="" alt="Social MEDIAS" src="/social-medias.svg" />
 
-          <div className="flex flex-col items-start gap-[9px] w-full">
-            <p className="flex items-center justify-center w-full h-[33px] [font-family:'Inter',Helvetica] font-normal text-[#233046] text-xs text-center tracking-[0] leading-4">
+          <div className="flex flex-col items-center gap-2 w-full">
+            <p className="[font-family:'Inter',Helvetica] font-normal text-[#233046] text-xs text-center tracking-[0] leading-5 max-w-4xl">
               A Appmax é uma empresa brasileira registrada no CNPJ nº
               27.000.511/0001-60 com sede na Travessa São José, nº 455, sala 74,
               Navegantes, na cidade de Porto Alegre/RS, CEP 90240-200. A
@@ -81,6 +82,7 @@ export const FooterSection = (): JSX.Element => {
             </p>
           </div>
         </div>
+      </div>
       </div>
     </footer>
   );

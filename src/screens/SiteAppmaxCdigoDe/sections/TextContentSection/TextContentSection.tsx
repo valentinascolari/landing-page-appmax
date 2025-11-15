@@ -24,17 +24,18 @@ const problemCards = [
 
 export const TextContentSection = (): JSX.Element => {
   return (
-    <section className="flex flex-col items-start gap-2.5 px-[253px] py-32 bg-[linear-gradient(180deg,rgba(248,245,255,1)_0%,rgba(255,255,255,1)_100%)] w-full">
-      <div className="flex items-center gap-16 px-[124px] py-0 w-full flex-col">
-        <div className="inline-flex flex-col items-center gap-[18px]">
-          <div className="inline-flex items-center justify-center gap-2.5">
-            <h2 className="flex items-center justify-center w-[843px] h-[111px] [font-family:'DM_Sans',Helvetica] font-bold text-[#2e225e] text-5xl text-center tracking-[0] leading-[48px]">
+    <section className="w-full bg-[linear-gradient(180deg,rgba(248,245,255,1)_0%,rgba(255,255,255,1)_100%)] py-16 md:py-32">
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+      <div className="flex items-center gap-8 md:gap-16 w-full flex-col">
+        <div className="flex flex-col items-center gap-4 md:gap-[18px] w-full">
+          <div className="flex items-center justify-center gap-2.5 w-full">
+            <h2 className="[font-family:'DM_Sans',Helvetica] font-bold text-[#2e225e] text-3xl md:text-4xl lg:text-5xl text-center tracking-[0] leading-tight px-4">
               O seu cliente está ansioso e o seu atendimento sobrecarregado?
             </h2>
           </div>
 
-          <div className="inline-flex items-center justify-center gap-2.5">
-            <p className="flex items-center justify-center w-[745.32px] h-[54px] [font-family:'DM_Sans',Helvetica] font-normal text-[#4c347f] text-xl text-center tracking-[0] leading-7">
+          <div className="flex items-center justify-center gap-2.5 w-full">
+            <p className="[font-family:'DM_Sans',Helvetica] font-normal text-[#4c347f] text-lg md:text-xl text-center tracking-[0] leading-7 max-w-3xl px-4">
               Todo negócio que escala, enfrenta o mesmo gargalo: a ansiedade do
               cliente
               <br />
@@ -44,20 +45,20 @@ export const TextContentSection = (): JSX.Element => {
           </div>
         </div>
 
-        <div className="inline-flex items-center gap-[33px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full">
           {problemCards.map((card, index) => (
             <Card
               key={index}
-              className="flex flex-col w-[361.66px] items-start gap-[21px] rounded-3xl overflow-hidden border border-solid border-[#dcc3fe] shadow-[0px_4px_6px_-4px_#0000001a,0px_10px_15px_-3px_#0000001a] bg-[linear-gradient(138deg,rgba(249,245,255,1)_0%,rgba(237,226,254,1)_100%)]"
+              className="flex flex-col w-full items-start gap-[21px] rounded-3xl overflow-hidden border border-solid border-[#dcc3fe] shadow-[0px_4px_6px_-4px_#0000001a,0px_10px_15px_-3px_#0000001a] bg-[linear-gradient(138deg,rgba(249,245,255,1)_0%,rgba(237,226,254,1)_100%)]"
             >
-              <CardContent className="flex flex-col items-start gap-[21px] p-[33px] w-full">
+              <CardContent className="flex flex-col items-start gap-[21px] p-6 md:p-[33px] w-full">
                 <img className="w-16 h-16" alt={card.title} src={card.image} />
 
-                <h3 className="flex items-center justify-center self-stretch h-7 [font-family:'DM_Sans',Helvetica] font-bold text-[#2e225e] text-xl tracking-[0] leading-7 whitespace-nowrap">
+                <h3 className="[font-family:'DM_Sans',Helvetica] font-bold text-[#2e225e] text-xl tracking-[0] leading-7">
                   {card.title}
                 </h3>
 
-                <p className="flex items-center justify-center self-stretch h-[125px] [font-family:'DM_Sans',Helvetica] font-normal text-[#4c347f] text-base tracking-[0] leading-[26px]">
+                <p className="[font-family:'DM_Sans',Helvetica] font-normal text-[#4c347f] text-base tracking-[0] leading-[26px]">
                   {card.description.split("\n").map((line, i) => (
                     <React.Fragment key={i}>
                       {line}
@@ -69,6 +70,7 @@ export const TextContentSection = (): JSX.Element => {
             </Card>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );

@@ -29,8 +29,8 @@ const metricCards = [
 
 export const InfoCardSection = (): JSX.Element => {
   return (
-    <section className="w-full bg-[linear-gradient(171deg,rgba(46,34,94,1)_0%,rgba(46,34,94,1)_50%,rgba(21,16,46,1)_100%)] py-32 px-4">
-      <div className="container mx-auto max-w-[1440px]">
+    <section className="w-full bg-[linear-gradient(171deg,rgba(46,34,94,1)_0%,rgba(46,34,94,1)_50%,rgba(21,16,46,1)_100%)] py-16 md:py-32">
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col gap-7">
             <Badge className="inline-flex items-center gap-2 px-4 py-2 w-fit bg-[#ffffff1a] rounded-full backdrop-blur-[2px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(2px)_brightness(100%)] border-0 hover:bg-[#ffffff1a]">
@@ -40,14 +40,14 @@ export const InfoCardSection = (): JSX.Element => {
               </span>
             </Badge>
 
-            <h2 className="[font-family:'DM_Sans',Helvetica] font-bold text-white text-5xl tracking-[0] leading-[48px]">
+            <h2 className="[font-family:'DM_Sans',Helvetica] font-bold text-white text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-tight">
               A credibilidade da
               <br />
               Appmax validando a<br />
               sua entrega.
             </h2>
 
-            <div className="[font-family:'DM_Sans',Helvetica] font-normal text-[#ece3fc] text-xl tracking-[0] leading-7">
+            <div className="[font-family:'DM_Sans',Helvetica] font-normal text-[#ece3fc] text-lg md:text-xl tracking-[0] leading-7">
               <span className="[font-family:'DM_Sans',Helvetica] font-normal text-[#ece3fc] text-xl tracking-[0] leading-7">
                 Não é apenas uma notificação. É uma mensagem
                 <br />
@@ -63,11 +63,11 @@ export const InfoCardSection = (): JSX.Element => {
               </span>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
               {featureCards.map((feature, index) => (
                 <Card
                   key={index}
-                  className="bg-[#ffffff1a] border-0 rounded-2xl backdrop-blur-[2px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(2px)_brightness(100%)]"
+                  className="w-full bg-[#ffffff1a] border-0 rounded-2xl backdrop-blur-[2px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(2px)_brightness(100%)]"
                 >
                   <CardContent className="p-4 flex items-center gap-4">
                     <img
@@ -91,7 +91,7 @@ export const InfoCardSection = (): JSX.Element => {
 
           <div className="flex justify-center lg:justify-end">
             <Card className="w-full max-w-[488px] rounded-3xl overflow-hidden shadow-[0px_25px_50px_-12px_#00000040] bg-[linear-gradient(134deg,rgba(171,106,251,1)_0%,rgba(117,76,200,1)_100%)] border-0">
-              <CardContent className="p-12 flex flex-col gap-8">
+              <CardContent className="p-6 md:p-8 lg:p-12 flex flex-col gap-6 md:gap-8">
                 <div className="flex items-center gap-4">
                   <div className="relative w-20 h-20 flex-shrink-0">
                     <img

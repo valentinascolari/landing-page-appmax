@@ -66,15 +66,17 @@ const pricingPlans = [
 
 export const CallToActionSection = (): JSX.Element => {
   return (
-    <section className="flex flex-col items-center gap-[78px] px-4 md:px-8 lg:px-[376px] py-[94px] bg-[linear-gradient(180deg,rgba(249,245,255,1)_0%,rgba(237,226,254,1)_100%)] w-full">
-      <header className="flex flex-col w-full max-w-[731.9px] items-center gap-[17px]">
-        <h2 className="[font-family:'DM_Sans',Helvetica] font-bold text-[#2e225e] text-5xl text-center tracking-[0] leading-[48px]">
+    <section className="w-full bg-[linear-gradient(180deg,rgba(249,245,255,1)_0%,rgba(237,226,254,1)_100%)] py-16 md:py-24">
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+      <div className="flex flex-col items-center gap-12 md:gap-16">
+      <header className="flex flex-col w-full max-w-3xl items-center gap-4">
+        <h2 className="[font-family:'DM_Sans',Helvetica] font-bold text-[#2e225e] text-3xl md:text-4xl lg:text-5xl text-center tracking-[0] leading-tight">
           Planos flexíveis que escalam
           <br />
           com o seu negócio.
         </h2>
 
-        <p className="[font-family:'DM_Sans',Helvetica] font-normal text-[#2e225e] text-xl text-center tracking-[0] leading-7">
+        <p className="[font-family:'DM_Sans',Helvetica] font-normal text-[#2e225e] text-lg md:text-xl text-center tracking-[0] leading-7">
           Escolha o plano ideal para o seu volume de vendas. Sem surpresas, sem
           custos
           <br />
@@ -82,11 +84,11 @@ export const CallToActionSection = (): JSX.Element => {
         </p>
       </header>
 
-      <div className="flex flex-wrap items-end justify-center gap-8 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full">
         {pricingPlans.map((plan, index) => (
           <div
             key={index}
-            className="flex flex-col items-center gap-7 w-full max-w-[362.67px]"
+            className="flex flex-col items-center gap-4 md:gap-7 w-full"
           >
             {plan.isPopular && (
               <Badge className="h-9 px-6 rounded-full shadow-[0px_4px_6px_-4px_#0000001a,0px_10px_15px_-3px_#0000001a] bg-[linear-gradient(90deg,rgba(171,106,251,1)_0%,rgba(117,76,200,1)_100%)] border-0">
@@ -103,7 +105,7 @@ export const CallToActionSection = (): JSX.Element => {
                   : "shadow-[0px_4px_6px_-4px_#0000001a,0px_10px_15px_-3px_#0000001a]"
               } overflow-hidden`}
             >
-              <CardContent className="p-[34px] flex flex-col gap-6">
+              <CardContent className="p-6 md:p-8 flex flex-col gap-4 md:gap-6">
                 <img
                   className="w-16 h-16"
                   alt={`${plan.title} icon`}
@@ -111,7 +113,7 @@ export const CallToActionSection = (): JSX.Element => {
                 />
 
                 <div className="flex flex-col gap-2">
-                  <h3 className="[font-family:'DM_Sans',Helvetica] font-bold text-[#2e225e] text-2xl leading-8">
+                  <h3 className="[font-family:'DM_Sans',Helvetica] font-bold text-[#2e225e] text-xl md:text-2xl leading-8">
                     {plan.title}
                   </h3>
                   <p className="[font-family:'DM_Sans',Helvetica] font-normal text-[#4c347f] text-sm tracking-[0] leading-[22.8px]">
@@ -120,7 +122,7 @@ export const CallToActionSection = (): JSX.Element => {
                 </div>
 
                 <div className="flex items-baseline gap-2">
-                  <span className="[font-family:'DM_Sans',Helvetica] font-bold text-[#2e225e] text-5xl tracking-[0] leading-[48px]">
+                  <span className="[font-family:'DM_Sans',Helvetica] font-bold text-[#2e225e] text-4xl md:text-5xl tracking-[0] leading-tight">
                     {plan.price}
                   </span>
                   <span className="[font-family:'DM_Sans',Helvetica] font-normal text-[#4c347f] text-base tracking-[0] leading-6">
@@ -140,7 +142,7 @@ export const CallToActionSection = (): JSX.Element => {
                   </span>
                 </Button>
 
-                <div className="flex flex-col gap-5 pt-6 border-t border-border">
+                <div className="flex flex-col gap-4 pt-4 md:pt-6 border-t border-border">
                   {plan.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-start gap-3">
                       <CheckIcon className="w-5 h-5 text-[#4c347f] flex-shrink-0 mt-0.5" />
@@ -156,15 +158,15 @@ export const CallToActionSection = (): JSX.Element => {
         ))}
       </div>
 
-      <div className="w-full max-w-[1153px]">
-        <Card className="rounded-3xl bg-[linear-gradient(169deg,rgba(171,131,226,1)_0%,rgba(76,52,127,1)_50%,rgba(9,2,39,1)_100%)] border-0">
-          <CardContent className="p-12">
+      <div className="w-full">
+        <Card className="rounded-2xl md:rounded-3xl bg-[linear-gradient(169deg,rgba(171,131,226,1)_0%,rgba(76,52,127,1)_50%,rgba(9,2,39,1)_100%)] border-0">
+          <CardContent className="p-6 md:p-8 lg:p-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="flex flex-col gap-4">
-                <h3 className="[font-family:'DM_Sans',Helvetica] font-bold text-white text-4xl leading-9">
+                <h3 className="[font-family:'DM_Sans',Helvetica] font-bold text-white text-2xl md:text-3xl lg:text-4xl leading-tight">
                   Plano Max
                 </h3>
-                <p className="[font-family:'DM_Sans',Helvetica] font-normal text-[#dcc3fe] text-xl tracking-[0] leading-7">
+                <p className="[font-family:'DM_Sans',Helvetica] font-normal text-[#dcc3fe] text-lg md:text-xl tracking-[0] leading-7">
                   Para operações com volume customizado
                 </p>
                 <p className="[font-family:'DM_Sans',Helvetica] font-normal text-[#dcc3fe] text-base tracking-[0] leading-6">
@@ -184,6 +186,8 @@ export const CallToActionSection = (): JSX.Element => {
             </div>
           </CardContent>
         </Card>
+      </div>
+      </div>
       </div>
     </section>
   );

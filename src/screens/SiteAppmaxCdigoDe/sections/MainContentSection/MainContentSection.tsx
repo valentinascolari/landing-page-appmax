@@ -23,8 +23,9 @@ const features = [
 
 export const MainContentSection = (): JSX.Element => {
   return (
-    <section className="flex flex-col items-start gap-2.5 pt-[152px] pb-[182px] px-[504px] bg-[linear-gradient(167deg,rgba(46,34,94,1)_0%,rgba(46,34,94,1)_50%,rgba(21,16,46,1)_100%)] w-full">
-      <div className="flex flex-col items-center gap-[62px] w-full">
+    <section className="w-full bg-[linear-gradient(167deg,rgba(46,34,94,1)_0%,rgba(46,34,94,1)_50%,rgba(21,16,46,1)_100%)] py-16 md:py-24 lg:py-32">
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+      <div className="flex flex-col items-center gap-8 md:gap-12 w-full">
         <Badge className="inline-flex items-center gap-2 px-6 py-3 bg-[#ffffff1a] rounded-full backdrop-blur-[2px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(2px)_brightness(100%)] border-0 hover:bg-[#ffffff1a]">
           <img className="w-5 h-5" alt="Svg" src="/svg-4.png" />
           <span className="[font-family:'DM_Sans',Helvetica] font-semibold text-white text-sm tracking-[0.35px] leading-5 whitespace-nowrap">
@@ -32,20 +33,20 @@ export const MainContentSection = (): JSX.Element => {
           </span>
         </Badge>
 
-        <h1 className="[font-family:'DM_Sans',Helvetica] font-bold text-white text-6xl text-center tracking-[0] leading-[60px]">
+        <h1 className="[font-family:'DM_Sans',Helvetica] font-bold text-white text-3xl md:text-5xl lg:text-6xl text-center tracking-[0] leading-tight">
           Feito para quem foca em
           <br />
           performance.
         </h1>
 
-        <p className="[font-family:'DM_Sans',Helvetica] font-normal text-[#ece3fc] text-2xl text-center tracking-[0] leading-8 max-w-full">
+        <p className="[font-family:'DM_Sans',Helvetica] font-normal text-[#ece3fc] text-lg md:text-xl lg:text-2xl text-center tracking-[0] leading-8 max-w-4xl px-4">
           Rastreio Automático não é uma feature. É uma vantagem competitiva que
           libera recursos e melhora seus números onde importa.
         </p>
 
-        <div className="flex items-center justify-between gap-4 w-full max-w-[835.89px]">
-          <Button className="h-auto flex-1 max-w-[461.27px] rounded-2xl shadow-[0px_25px_50px_-12px_#00000040] bg-[linear-gradient(134deg,rgba(171,106,251,1)_0%,rgba(117,76,200,1)_100%)] hover:bg-[linear-gradient(134deg,rgba(171,106,251,0.9)_0%,rgba(117,76,200,0.9)_100%)] px-6 py-[19px]">
-            <span className="[font-family:'DM_Sans',Helvetica] font-bold text-white text-xl tracking-[0] leading-7 whitespace-nowrap">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full max-w-4xl">
+          <Button className="h-auto w-full sm:flex-1 rounded-2xl shadow-[0px_25px_50px_-12px_#00000040] bg-[linear-gradient(134deg,rgba(171,106,251,1)_0%,rgba(117,76,200,1)_100%)] hover:bg-[linear-gradient(134deg,rgba(171,106,251,0.9)_0%,rgba(117,76,200,0.9)_100%)] px-4 md:px-6 py-4">
+            <span className="[font-family:'DM_Sans',Helvetica] font-bold text-white text-base md:text-lg lg:text-xl tracking-[0] leading-7">
               QUERO AUTOMATIZAR MEU RASTREIO
             </span>
             <img
@@ -55,17 +56,17 @@ export const MainContentSection = (): JSX.Element => {
             />
           </Button>
 
-          <Button className="h-auto bg-[#f8f5ff] hover:bg-[#f8f5ff]/90 rounded-2xl px-12 py-[19px]">
-            <span className="[font-family:'DM_Sans',Helvetica] font-bold text-[#4c347f] text-xl tracking-[0] leading-7 whitespace-nowrap">
+          <Button className="h-auto w-full sm:w-auto bg-[#f8f5ff] hover:bg-[#f8f5ff]/90 rounded-2xl px-6 md:px-12 py-4">
+            <span className="[font-family:'DM_Sans',Helvetica] font-bold text-[#4c347f] text-base md:text-lg lg:text-xl tracking-[0] leading-7">
               FALAR COM ESPECIALISTA
             </span>
           </Button>
         </div>
 
-        <div className="inline-flex items-center gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full max-w-4xl">
           {features.map((feature, index) => (
             <React.Fragment key={index}>
-              <div className="flex items-center gap-[15px]">
+              <div className="flex items-center justify-center sm:justify-start gap-4">
                 <img
                   className="w-12 h-12 flex-shrink-0"
                   alt="Feature icon"
@@ -80,15 +81,10 @@ export const MainContentSection = (): JSX.Element => {
                   </div>
                 </div>
               </div>
-              {index < features.length - 1 && (
-                <Separator
-                  orientation="vertical"
-                  className="h-12 w-px bg-[#ffffff33]"
-                />
-              )}
             </React.Fragment>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );
