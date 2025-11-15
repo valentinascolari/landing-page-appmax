@@ -1,0 +1,1 @@
+export { SeoSection } from "./SeoSection";
