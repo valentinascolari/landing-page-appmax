@@ -3,6 +3,7 @@ import { Badge } from "../../../../components/ui/badge";
 import { Card, CardContent } from "../../../../components/ui/card";
 
 const featureSteps = [
+    // ... seus dados featureSteps ...
   {
     icon: "/background-3.png",
     title: "Confirmação Imediata",
@@ -11,15 +12,15 @@ const featureSteps = [
   },
   {
     icon: "/background-4.png",
-    title: "Código de Rastreio Automático",
+    title: "Confirmação do Envio",
     description:
-      "O sistema se conecta com a transportadora, puxa o código de rastreio e dispara para o cliente — sem intervenção manual.",
+      "O pedido é despachado pela transportadora, o cliente é informado sobre o envio e recebe atualização de status em tempo real.",
   },
   {
     icon: "/background-5.png",
-    title: "Atualizações de Status Proativas",
+    title: "Confirmação da Entrega",
     description:
-      "A cada mudança importante no status da entrega (em trânsito, saiu para entrega, entregue), notificamos o cliente. Zero ansiedade, máxima confiança.",
+      "Quando a entrega é feita, o cliente recebe uma notificação confirmando o recebimento do pedido, encerrando a jornada com clareza e segurança.",
   },
 ];
 
@@ -48,7 +49,7 @@ export const FeatureHighlightSection = (): JSX.Element => {
         <div className="flex flex-col items-center gap-6 md:gap-8 w-full">
           {featureSteps.map((step, index) => (
             <React.Fragment key={index}>
-              <Card className="w-full max-w-4xl bg-white rounded-2xl md:rounded-3xl overflow-hidden border border-solid shadow-[0px_4px_6px_-4px_#0000001a,0px_10px_15px_-3px_#0000001a]">
+              <Card className="w-full max-w-4xl bg-white rounded-2xl md:rounded-3xl overflow-hidden border border-solid shadow-[0px_4px_6px_-4px_#0000001a,0px_10px_15px_-3px_#0000001a] hover:scale-105 transition-transform duration-300 cursor-default">
                 <CardContent className="p-6 md:p-8">
                   <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6">
                     <img
@@ -81,7 +82,7 @@ export const FeatureHighlightSection = (): JSX.Element => {
           </p>
         </div>
 
-        <Badge className="flex items-center gap-2 px-6 py-3 bg-[#ab6afb1a] rounded-full hover:bg-[#ab6afb1a] h-auto">
+        <Badge className="flex items-center gap-2 px-6 py-3 bg-[#ab6afb1a] rounded-full hover:bg-[#ab6afb33] transition-colors duration-300 cursor-default h-auto">
           <img className="w-5 h-5" alt="Svg" src="/svg-3.png" />
           <span className="[font-family:'DM_Sans',Helvetica] font-semibold text-[#2e225e] text-base text-center tracking-[0] leading-6 whitespace-nowrap">
             Ative em menos de 24 horas

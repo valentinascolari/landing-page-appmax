@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
 
 const problemCards = [
+  // ... seus dados problemCards ...
   {
     image: "/background.png",
     title: "Alto Custo de Suporte",
@@ -49,7 +50,7 @@ export const TextContentSection = (): JSX.Element => {
           {problemCards.map((card, index) => (
             <Card
               key={index}
-              className="flex flex-col w-full items-start gap-[21px] rounded-3xl overflow-hidden border border-solid border-[#dcc3fe] shadow-[0px_4px_6px_-4px_#0000001a,0px_10px_15px_-3px_#0000001a] bg-[linear-gradient(138deg,rgba(249,245,255,1)_0%,rgba(237,226,254,1)_100%)]"
+              className="flex flex-col w-full items-start gap-[21px] rounded-3xl overflow-hidden border border-solid border-[#dcc3fe] shadow-[0px_4px_6px_-4px_#0000001a,0px_10px_15px_-3px_#0000001a] bg-[linear-gradient(138deg,rgba(249,245,255,1)_0%,rgba(237,226,254,1)_100%)] hover:scale-105 transition-transform duration-300 cursor-default"
             >
               <CardContent className="flex flex-col items-start gap-[21px] p-6 md:p-[33px] w-full">
                 <img className="w-16 h-16" alt={card.title} src={card.image} />
